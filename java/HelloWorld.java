@@ -6,7 +6,7 @@ public class HelloWorld {
             String name = args[0];
             System.out.println("Hello, " + name + "!");
         } else {
-            System.out.println("Hello, world!");
+            System.out.println("Hello, World!");
         }
     
     }
