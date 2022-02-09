@@ -1,0 +1,13 @@
+# The .gitignore file is used for ignoring certain files that match the patterns listed herein
+
+# IDE-specific files and dirs
+.idea/
+*.iml
+
+# Java build artifacts - .class files dont need to be sent to github
+*.class
+*.jar
+
+#Output dirs
+out/
+target/
