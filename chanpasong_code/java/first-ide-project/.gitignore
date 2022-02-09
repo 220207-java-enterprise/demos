@@ -1,0 +1,15 @@
+# Used for ignoring certain files that match the patterns listed.
+
+#IDE-specific files and dirs
+
+.idea/
+*.iml
+
+#Java build artifacts
+*.class
+*.jar
+
+# Output dirs
+out/
+target/
+
