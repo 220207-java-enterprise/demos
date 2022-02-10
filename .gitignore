@@ -2,7 +2,8 @@
 *.class
 
 # Log file
-*.log
+**.log
+**.DS_Store
 
 # BlueJ files
 *.ctxt
