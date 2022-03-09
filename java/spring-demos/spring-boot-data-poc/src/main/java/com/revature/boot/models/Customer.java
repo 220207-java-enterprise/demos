@@ -34,7 +34,7 @@ public class Customer {
     @OneToMany(
         mappedBy = "owner",
         fetch = FetchType.EAGER,
-        cascade = CascadeType.PERSIST // when a customer is saved, save all boots in this list (if any exist)
+        cascade = CascadeType.ALL // when a customer is saved, save all boots in this list (if any exist)
     )
     private List<Boot> bootsPurchased;
 
