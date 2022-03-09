@@ -28,7 +28,7 @@ public class Boot {
     @Column(columnDefinition = "varchar default 'beige'")
     private String color;
 
-    @Column(nullable = false, columnDefinition = "numeric(5,2) check (size > 0 AND size <= 23)")
+    @Column(nullable = false, columnDefinition = "numeric(4,2) check (size > 0 AND size <= 23)")
     private double size;
 
     @Column(nullable = false)

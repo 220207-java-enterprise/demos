@@ -2,6 +2,8 @@ package com.revature.boot.models;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -29,8 +31,16 @@ public class Customer {
     @Embedded
     private Address address;
 
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(
+        mappedBy = "owner",
+        fetch = FetchType.EAGER,
+        cascade = CascadeType.PERSIST // when a customer is saved, save all boots in this list (if any exist)
+    )
     private List<Boot> bootsPurchased;
+
+    public Customer() {
+        bootsPurchased = new ArrayList<>();
+    }
 
     public String getId() {
         return id;
@@ -96,6 +106,10 @@ public class Customer {
         this.bootsPurchased = bootsPurchased;
     }
 
+    public void addBootsToPurchasedList(Boot... boots) {
+        bootsPurchased.addAll(Arrays.asList(boots));
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -106,7 +120,6 @@ public class Customer {
                 ", shoeSize=" + shoeSize +
                 ", address=" + address +
                 ", joinedDatetime=" + joinedDatetime +
-                ", bootsPurchased=" + bootsPurchased +
                 '}';
     }
 

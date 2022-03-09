@@ -57,11 +57,14 @@ public class DummyDataInserter implements CommandLineRunner {
         hikingBoots2.setMaterial("leather");
         hikingBoots2.setOwner(customer1);
 
-        customerRepo.save(customer1);
-        bootRepo.save(hikingBoots);
-        bootRepo.save(hikingBoots2);
+        customer1.addBootsToPurchasedList(hikingBoots, hikingBoots2);
+        customerRepo.save(customer1); // the boots purchased by the customer are automatically persisted
 
         System.out.println(bootRepo.getBootsByOwner(customer1));
+
+        System.out.println(customerRepo.findById(customer1.getId())
+                                       .orElseThrow(RuntimeException::new)
+                                       .getBootsPurchased());
 
     }
 
