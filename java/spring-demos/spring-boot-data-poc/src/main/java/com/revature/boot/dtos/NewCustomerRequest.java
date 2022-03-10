@@ -1,10 +1,9 @@
 package com.revature.boot.dtos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.revature.boot.models.Address;
 import com.revature.boot.models.Customer;
 
-import javax.persistence.Column;
-import javax.persistence.Embedded;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -14,7 +13,6 @@ public class NewCustomerRequest {
     private String lastName;
     private String email;
     private double shoeSize;
-    private LocalDateTime joinedDatetime;
     private Address address;
 
     public String getFirstName() {
@@ -49,14 +47,6 @@ public class NewCustomerRequest {
         this.shoeSize = shoeSize;
     }
 
-    public LocalDateTime getJoinedDatetime() {
-        return joinedDatetime;
-    }
-
-    public void setJoinedDatetime(LocalDateTime joinedDatetime) {
-        this.joinedDatetime = joinedDatetime;
-    }
-
     public Address getAddress() {
         return address;
     }
@@ -84,7 +74,6 @@ public class NewCustomerRequest {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", shoeSize=" + shoeSize +
-                ", joinedDatetime=" + joinedDatetime +
                 ", address=" + address +
                 '}';
     }
