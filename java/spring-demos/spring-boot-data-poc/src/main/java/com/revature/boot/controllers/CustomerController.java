@@ -2,9 +2,11 @@ package com.revature.boot.controllers;
 
 import com.revature.boot.dtos.NewCustomerRequest;
 import com.revature.boot.dtos.ResourceCreationResponse;
-import com.revature.boot.models.Customer;
 import com.revature.boot.services.CustomerService;
 import com.revature.boot.util.InvalidRequestException;
+import org.apache.tomcat.jni.Local;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,8 @@ import java.util.HashMap;
 @RequestMapping("/customers")
 public class CustomerController {
 
+//    private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
+
     private CustomerService customerService;
 
     @Autowired
@@ -26,8 +30,10 @@ public class CustomerController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(produces = "application/json", consumes = "application/json")
     public ResourceCreationResponse registerCustomer(@RequestBody NewCustomerRequest request) {
-        // TODO optional security logic
-        return customerService.registerNewCustomer(request);
+//        logger.info("CustomerController#registerCustomer invoked at {} with args: {}", LocalDateTime.now(), request);
+        ResourceCreationResponse response = customerService.registerNewCustomer(request);
+//        logger.info("CustomerController#registerCustomer successfully returned at {} with value: {}", LocalDateTime.now(), response);
+        return response;
     }
 
     @ExceptionHandler

@@ -3,6 +3,7 @@ package com.revature.boot.controllers;
 import com.revature.boot.dtos.ResourceCreationResponse;
 import com.revature.boot.models.Customer;
 import com.revature.boot.repos.CustomerRepository;
+import com.revature.boot.util.security.Secured;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,7 @@ public class TestController {
         this.customerRepo = customerRepo;
     }
 
+    @Secured(allowedUsers = {"wsingleton, aanderson"})
     @GetMapping
     public String test() {
         return "{\"endpoint\": \"/test\", \"status\": UP}";
