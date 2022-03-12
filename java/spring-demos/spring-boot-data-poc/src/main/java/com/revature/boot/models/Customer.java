@@ -25,7 +25,7 @@ public class Customer {
     @Column(name = "shoe_size", nullable = false)
     private double shoeSize;
 
-    @Column(name = "joined_datetime", columnDefinition = "timestamp default current_timestamp")
+    @Column(name = "joined_datetime")
     private LocalDateTime joinedDatetime;
 
     @Embedded

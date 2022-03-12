@@ -7,11 +7,13 @@ import com.revature.boot.repos.BootRepository;
 import com.revature.boot.repos.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
+@Profile("local")
 @Component
 public class DummyDataInserter implements CommandLineRunner {
 
