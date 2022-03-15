@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.377);
+    background-color: rgba(255, 255, 255, 0.26);
+    color: #e2e2e2;
+    padding: inherit;
+}

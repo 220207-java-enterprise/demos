@@ -1,0 +1,65 @@
+@import url('for-import-dark.css');
+
+p {
+    padding: 5px;
+}
+
+#zero {
+    background-color: rgb(102, 0, 0);
+}
+
+#one {
+    background-color: rgb(190, 24, 24);
+}
+
+#two {
+    background-color: rgb(233, 64, 13);
+}
+
+#three {
+    background-color: rgb(255, 124, 17);
+}
+
+#four {
+    background-color: rgb(255, 180, 19);
+}
+
+#five {
+    background-color: rgb(255, 251, 0);
+}
+
+#six {
+    background-color: rgb(159, 236, 15);
+}
+
+#seven {
+    background-color: rgb(62, 221, 13);
+}
+
+#eight {
+    background-color: rgb(9, 230, 145);
+}
+
+#nine {
+    background-color: rgb(5, 218, 218);
+}
+
+#ten {
+    background-color: rgb(16, 134, 202);
+}
+
+#eleven {
+    background-color: rgb(7, 78, 185);
+}
+
+#twelve {
+    background-color: rgb(0, 27, 177);
+}
+
+#thirteen {
+    background-color: rgb(54, 9, 158);
+}
+
+#fourteen {
+    background-color: rgb(41, 0, 65);
+}
