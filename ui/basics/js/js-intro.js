@@ -239,6 +239,9 @@ function Car(make, model, color, year) {
 let defaultCar = new Car();
 console.log(defaultCar);
 let myCar = new Car('Nissan', 'Rogue', 'Grey');
+let ajiCar = new Car('Lamborghini', 'Huracan', 'Red','2021');
+ajiCar.honk();
+console.log(ajiCar);
 myCar.honk();
 
 
@@ -260,8 +263,18 @@ class Truck {
 
 }
 
+class RedTruck extends Truck{
+    constructor (make, model, year){
+        super(make,model,'Red',year);
+    }
+}
+
 let myTruck = new Truck();
+console.log(myTruck)
 myTruck.honk();
+let myRedTruck = new RedTruck();
+console.log(myRedTruck)
+myRedTruck.honk();
 
 console.log('+-----------------------------+');
 
