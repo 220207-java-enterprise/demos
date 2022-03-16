@@ -4,5 +4,4 @@ import login from './components/login/login.js';
 
 window.onload = function() {
     login.render();
-    login.render();
 }
