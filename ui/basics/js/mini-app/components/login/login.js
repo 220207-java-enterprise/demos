@@ -14,7 +14,6 @@ function LoginComponent() {
     // Use of the await keyword requires the function to be async
     async function login() {
 
-        console.log(`Provided credentials: ${un, pw}`);
         if (!un || !pw) {
             console.log('no username or password provided!');
             return;
